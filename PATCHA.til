@@ -1,0 +1,33 @@
+Disp "ENTER"
+Disp "PERMIT."
+Prompt E
+Disp "ENTER"
+Disp "RES. FREQ."
+Prompt F
+Disp "ENTER"
+Disp "PCB H."
+Prompt H
+Disp "ENTER"
+Disp "RIN"
+Prompt R
+(3*10^8)/(2*F)*[root]^22/(E+1))->W
+Disp "WIDTH",W
+Pause
+(E+1)/2+((E-1)/2)*(1/[root]^21+12*(H/W)))->E
+Disp "EEFF",E
+Pause
+H*0.412*(((E+0.3)*(W/H+0.264))/((E-0.258)*(W/H+0.8)))->L
+Disp "DELTAL",L
+Pause
+(3*10^8)/([root]^2E)*2*F)->C
+C-2*L->L
+Disp "LENGTH",L
+Pause
+2*[pi]/F->B
+((W*F)/(120*3*10^8))*(1-(1/24)*(B*H)^2)->G
+Disp "GIN",G
+Pause
+(acos([root]^22*R*G)))*(L/[pi])->X
+Disp "SOLUTION 1",X
+(acos(0-[root]^22*R*G)))*(L/[pi])->X
+Disp "SOLUTION 2",X

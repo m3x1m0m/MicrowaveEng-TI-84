@@ -1,0 +1,29 @@
+Disp "ENTER Z0"
+Prompt Z
+Disp "ENTER FREQ."
+Prompt F
+Disp "ENTER PCB"
+Disp "THICKNESS"
+Disp "IN M"
+Prompt D
+Disp "ENTER"
+Disp "PERMITTIVITY"
+Prompt E
+Disp "ENTER"
+Disp "PHASE"
+Disp "IN DEG"
+Prompt P
+(Z/60)*[root]^2E+1)/2+((E-1)/(E+1))*(0.23+0.11/E)->A
+(377*[pi])/(2*Z*[root]^2E))->B
+(8*e^A)/(e^(2*A)-2)->W
+If (W>2)
+Then
+(2/[pi])*(B-1-ln(2*B-1)+((E-1)/(2*E))*(ln(B-1)+0.39-0.61/E))->W
+End
+W*D->W
+Disp "WIDTH",W
+Pause
+(E+1)/2+((E-1)/2)*(1/[root]^21+12*D*(1/W))->R
+((3*10^8)/([root]^2R)*F))*(P/360)->L
+Disp "LENGTH"
+Disp "IN M",L

@@ -1,0 +1,19 @@
+Disp "ENTER"
+Disp "WAVEGUIDE"
+Disp "DIMENSIONS"
+Prompt A,B
+Disp "ENTER"
+Disp "MAXIMA"
+Prompt M,N
+Disp "ENTER"
+Disp "WAVE VEL."
+Prompt V
+For(I,0,M)
+For(J,0,N)
+0.5*V*[root]^2(I/A)^2+(J/B)^2)->F
+Disp "M",I
+Disp "N",J
+Disp "Fc",F
+Pause
+End
+End

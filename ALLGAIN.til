@@ -1,0 +1,30 @@
+Disp "CALC UNILAT."
+Disp "GAIN"
+Disp "4 ALL CASES"
+Disp "GAMMAS"
+Prompt A
+Disp "GAMMAL"
+Prompt B
+[list]S(1)+([list]S(2)*[list]S(3)*B)/(1-[list]S(4)*B)->C
+(1-abs(A)^2)/abs(1-C*A)^2->G
+Disp "GS",G
+G->X
+10*log(G)->G
+Disp "GS IN DB",G
+Pause
+(1-abs(B)^2)/abs(1-[list]S(4)*B)^2->G
+Disp "GL",G
+X*G->X
+10*log(G)->G
+Disp "GL IN DB",G
+Pause
+abs([list]S(3))^2->G
+Disp "G0",G
+X*G->X
+10*log(G)->G
+Disp "G0 IN DB",G
+Pause
+Disp "GT",X
+10*log(X)->X
+Disp "GT IN DB",X
+

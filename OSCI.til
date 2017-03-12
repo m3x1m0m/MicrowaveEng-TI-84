@@ -1,0 +1,35 @@
+Disp "ENTER"
+Disp "DESIGN CHOICE"
+Disp "FOR GAMMAL"
+Prompt L
+[list]S(1)+([list]S(2)*[list]S(3)*L)/(1-[list]S(4)*L)->I
+abs(I)->X
+angle(I)*(180/[pi])->Y
+Disp "GAMMA IN",X,Y
+Disp "ENTER Z0"
+Prompt Z
+Z*(1+I)/(1-I)->I
+real(I)->X
+imag(I)->Y
+Disp "REAL(ZIN)",X
+Disp "IMAG(ZIN)",Y
+Pause
+Disp "DESIGN PARAMS"
+Disp "ARE"
+[neg]X/3->X
+X/Z->A
+[neg]Y->Y
+Y/Z->B
+Disp "RS=-RIN/3",X
+Disp "NORMALIZED",A
+Pause
+Disp "XS=-XIN",Y
+Disp "NORMALIZED",B
+Disp "LENGTH 1?"
+Prompt B
+X+[root]^2[neg]1)*Y->C
+(C-Z)/(C+Z)->C
+abs(C)->X
+X*B->Y
+angle(C)*(180/[pi])->Z
+Disp "GAMMAS",X,Y,Z

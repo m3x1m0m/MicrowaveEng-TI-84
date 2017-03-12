@@ -1,0 +1,23 @@
+Disp "ENTER"
+Disp "CAVITY"
+Disp "DIMENSIONS"
+Prompt A,B,D
+Disp "ENTER"
+Disp "NO. OF"
+Disp "MAXIMA"
+Prompt M,N,L
+Disp "ENTER"
+Disp "UR AND ER"
+Prompt U,E
+Disp "ENTER"
+Disp "SPECIFIC"
+Disp "CONDUCT."
+Prompt O
+((3*10^8)/(2*[root]^2U*E))*[root]^2(M/A)^2+(N/B)^2+(L/D)^2)->F
+Disp "RESONANCE"
+Disp "AT",F
+Pause
+1/[root]^2F*[pi]^2*4*10^(-1*7)*O*U)->S
+Disp S
+(A*B*D*(A^2+D^2))/(S*(2*B*(A^3+D^3)+A*D*(A^2+D^2)))->Q
+Disp "Q FACTOR",Q

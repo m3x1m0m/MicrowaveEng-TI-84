@@ -1,0 +1,14 @@
+Disp "DES. F IN dB"
+Prompt F,L
+10^(F/10)->F
+((F-10^([list]F(1)/10))/((4*[list]F(3))/[list]F(4)))*abs(1+[list]F(2))^2->N
+Disp "N",N
+[root]^2N*(N+1-abs([list]F(2))^2))/(N+1)->R
+R*L->X
+Disp "RF",R,X
+Pause
+[list]F(2)/(N+1)->C
+abs(C)->X
+abs(C)*L->Y
+angle(C)*(180/[pi])->Z
+Disp "CF",X,Y,Z
