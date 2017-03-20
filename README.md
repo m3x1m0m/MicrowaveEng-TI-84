@@ -2,7 +2,7 @@
 These are some small BASIC programs I wrote for solving some common microwave engineering problems with the TI-84 Plus. 
 
 ## Requierements
-If you want to use this programs or even want to contribute follow these steps. You can use any type of editor you like e.g. vim, but you need this compiler: https://sourceforge.net/projects/tibasic/. It is possible to compile it yourselfe or just take some precompiled binaries. If you use Linux you might need to download wine, to use the precompiled windows binaries. 
+If you want to use this programs or even want to contribute follow these steps. You can use any type of editor you like e.g. vim, but you need this compiler: https://sourceforge.net/projects/tibasic/. It is possible to compile it yourself or just take some precompiled binaries. If you use Linux you might need to download wine, to use the precompiled windows binaries. 
 Moreover you need some software to flash the resulting .8xp files to the TI-84. You can use tilp for linux (http://lpg.ticalc.org/prj_tilp/) or you use TI software for windows. 
 
 ## Compilation and Flashing
